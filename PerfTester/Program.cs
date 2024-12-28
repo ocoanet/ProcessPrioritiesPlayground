@@ -16,7 +16,7 @@ if (args.Length == 0)
 var processPriority = Enum.Parse<ProcessPriorityClass>(args[0]);
 
 Process.GetCurrentProcess().PriorityClass = processPriority;
-Console.WriteLine($"Starting process with priority {processPriority}");
+Console.WriteLine($"{processPriority} priority - Process starting");
 
 var startingTimestamp = Stopwatch.GetTimestamp();
 
@@ -33,4 +33,5 @@ Parallel.For(
     localFinally: _ => { }
 );
 
-Console.WriteLine($"Process with {processPriority} priority completed in {Stopwatch.GetElapsedTime(startingTimestamp)}");
+var elapsedTime = Stopwatch.GetElapsedTime(startingTimestamp);
+Console.WriteLine($"{processPriority} priority - Process completed in {elapsedTime.TotalSeconds:0.0}s");
