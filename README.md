@@ -1,8 +1,8 @@
-The projets in this repository explore the .NET priority API effects on Windows and Linux.
+The projects in this repository explore the .NET priority API effects on Windows and Linux.
 
 ## ArticleCode
 
-ArticleCode contains various priority change expirements.
+ArticleCode contains various priority change experiments.
 
 ## PerfTester
 
